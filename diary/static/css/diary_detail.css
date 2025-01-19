@@ -236,3 +236,15 @@ nav a {
 nav a:hover {
     background-color: #FFC9B4; /* 鼠标悬停时的背景色 */
 }
+
+.diary-image-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.diary-image {
+    max-width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: contain;
+}

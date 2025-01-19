@@ -17,16 +17,18 @@ def home(request):
 #     return render(request, 'diary_list.html', {'diaries': diaries})
 
 
-
 def add_diary(request):
     if request.method == 'POST':
-        form = DiaryForm(request.POST)
+        # 包括 request.FILES 以处理文件上传
+        form = DiaryForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            form.save()  # 保存表单数据，包括上传的文件
             messages.success(request, '日记提交成功！')
             return redirect('home')  # 提交成功后重定向到首页
     else:
-        form = DiaryForm()
+        form = DiaryForm()  # 如果是 GET 请求，显示空表单
+
+    # 渲染模板并传递表单上下文
     return render(request, 'add_diary.html', {'form': form})
 
 
@@ -69,6 +71,11 @@ def delete_comment(request, comment_id):
         comment.delete()
     return redirect('diary_detail', diary_id=comment.diary.id)
 
+
+def delete_diary(request, diary_id):
+    diary = get_object_or_404(Diary, id=diary_id)
+    diary.delete()
+    return redirect('home')
 
 
 

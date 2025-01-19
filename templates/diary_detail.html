@@ -16,6 +16,13 @@
     <main>
         <article>
             <p>{{ diary.content }}</p>
+
+            <!-- 如果存在图片，显示图片 -->
+            {% if diary.image %}
+                <div class="diary-image-container">
+                    <img src="{{ diary.image.url }}" alt="Diary Image" class="diary-image">
+                </div>
+            {% endif %}
         </article>
 
         <nav>

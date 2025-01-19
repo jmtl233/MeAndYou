@@ -23,18 +23,19 @@
         <ul>
             {% for diary in diaries %}
                 <li>
-                    <!-- 将整个<li>标签包裹在<a>标签中 -->
                     <a href="{% url 'diary_detail' diary.id %}" class="diary-link">
                         <div class="diary-content">
                             <h4>{{ diary.title }}</h4>
                             <p class="diary-date">{{ diary.created_at|date:"Y.m.d H:i:s" }}</p>
                             <p>{{ diary.content|truncatewords:30 }}</p>
+                            {% if diary.image %}
+                                <img src="{{ diary.image.url }}" alt="Diary Image" class="diary-image">
+                            {% endif %}
                         </div>
                     </a>
-                    <!-- 删除按钮 -->
                     <form method="POST" action="{% url 'delete_diary' diary.id %}" class="delete-form">
                         {% csrf_token %}
-                        <button type="submit" class="delete-btn">删除</button>
+{#                        <button type="submit" class="delete-btn">删除</button>#}
                     </form>
                 </li>
             {% empty %}

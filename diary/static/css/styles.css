@@ -132,3 +132,12 @@ footer {
     text-decoration: none; /* 去掉链接的下划线 */
     color: inherit; /* 继承父元素的字体颜色 */
 }
+
+
+.diary-image {
+    width: 100%;         /* 宽度自适应父容器 */
+    height: auto;        /* 高度根据宽度自动调整 */
+    max-width: 300px;    /* 最大宽度 300px，不超过该值 */
+    max-height: 200px;   /* 最大高度 200px，不超过该值 */
+    object-fit: contain; /* 保持图片比例，填充容器时不会裁剪 */
+}
