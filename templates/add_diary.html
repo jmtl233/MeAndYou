@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="zh">
 <head>
@@ -44,3 +45,55 @@
     </footer>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新增日记</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/add_diary.css' %}">
+    <script>
+        // 显示弹窗的函数
+        function showSuccessMessage() {
+            alert("日记提交成功！");
+            window.location.href = "{% url 'home' %}";  // 提交成功后跳转到首页
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>新增日记</h1>
+        <p>记录你的心情和点滴</p>
+    </header>
+
+    <main>
+        <h2>新增一篇日记</h2>
+        <form method="POST" enctype="multipart/form-data">  <!-- 重要：要加 enctype -->
+            {% csrf_token %}
+            <div>
+                <label for="{{ form.title.id_for_label }}">标题</label>
+                {{ form.title }}
+            </div>
+            <div>
+                <label for="{{ form.content.id_for_label }}">内容</label>
+                {{ form.content }}
+            </div>
+            <div>
+                <label for="{{ form.image.id_for_label }}">图片</label>
+                {{ form.image }}
+            </div>
+            <button type="submit" onclick="showSuccessMessage()">提交</button>
+        </form>
+        <nav>
+            <button onclick="window.location.href='{% url 'home' %}'">返回首页</button>
+        </nav>
+    </main>
+
+    <footer>
+        &copy; {{ year }} 我和你 | 记录生活，点滴回忆
+    </footer>
+</body>
+</html>
+>>>>>>> 8f0fcbb7bb98bdd5076a6f116d8194ae9c0b480c

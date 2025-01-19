@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ProjectModuleManager">
@@ -5,4 +6,13 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/MeAndYou.iml" filepath="$PROJECT_DIR$/.idea/MeAndYou.iml" />
     </modules>
   </component>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/MeAndYou.iml" filepath="$PROJECT_DIR$/.idea/MeAndYou.iml" />
+    </modules>
+  </component>
+>>>>>>> 8f0fcbb7bb98bdd5076a6f116d8194ae9c0b480c
 </project>
