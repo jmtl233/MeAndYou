@@ -1,0 +1,238 @@
+/* 全局样式 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #FFD1DC; /* 淡粉色 */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+header .diary-date {
+    font-size: 14px;
+    color: #888;
+    margin-top: 10px;
+}
+
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+article {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+nav {
+    margin-top: 20px;
+    text-align: center;
+}
+
+button {
+    width: 100%;
+    background-color: #FFB6C1; /* 淡粉色背景 */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #FF9CBF; /* 深粉色 */
+}
+
+section {
+    margin-top: 40px;
+}
+
+h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.comment-date {
+    font-size: 14px;
+    color: #888;
+    margin-top: 5px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+form h4 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+form button {
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #f1f1f1;
+    color: #666;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+/* 评论区样式 */
+.comment-form {
+    margin-top: 20px;
+}
+
+.comment-form .form-group {
+    margin-bottom: 15px;
+}
+
+.comment-form label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+/* 删除评论按钮 */
+.delete-comment-btn {
+    width: auto; /* 按钮宽度自动 */
+    padding: 5px 10px; /* 小的内边距 */
+    font-size: 14px; /* 较小的字体 */
+    background-color: #FFB6C1; /* 番茄红背景 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    margin-left: 10px; /* 与评论内容之间有间距 */
+}
+
+.delete-comment-btn:hover {
+    background-color: #FF9CBF; /* 深番茄红 */
+}
+
+/* 列表项样式 */
+ul li {
+    display: flex;
+    justify-content: space-between; /* 左右两边分布 */
+    align-items: center;
+}
+
+/* 删除按钮样式调整 */
+.delete-comment-btn {
+    margin-left: 0; /* 不要额外的左间距 */
+    margin-top: 0; /* 不要额外的顶部间距 */
+}
+
+/* 新增日记页面的表单样式 */
+form div {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: #fafafa;
+}
+
+input[type="text"]:focus, textarea:focus {
+    border-color: #FFD1DC;
+    background-color: #fff;
+    outline: none;
+}
+
+button, .nav-button {
+    width: 100%; /* 让按钮与文本框一样宽 */
+    background-color: #FFB6C1;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+button:hover, .nav-button:hover {
+    background-color: #FFC9B4;
+}
+
+nav {
+    margin-top: 20px;
+    text-align: center;
+}
+
+nav a {
+    width: 97.5%; /* 使按钮宽度和父元素一样宽 */
+    text-decoration: none;
+    color: white; /* 设置文字颜色 */
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #FFB6C1; /* 设置背景色 */
+    padding: 10px 20px; /* 增加内边距让按钮更大 */
+    border-radius: 5px; /* 圆角效果 */
+    display: inline-block; /* 让它成为块级元素以适应宽度 */
+    text-align: center; /* 确保文本居中 */
+}
+
+nav a:hover {
+    background-color: #FFC9B4; /* 鼠标悬停时的背景色 */
+}

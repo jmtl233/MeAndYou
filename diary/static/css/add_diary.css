@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #FFD1DC;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+main h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+}
+
+form div {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: #fafafa;
+}
+
+input[type="text"]:focus, textarea:focus {
+    border-color: #FFD1DC;
+    background-color: #fff;
+    outline: none;
+}
+
+button, .nav-button {
+    width: 100%; /* 让按钮与文本框一样宽 */
+    background-color: #FFB6C1;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+button:hover, .nav-button:hover {
+    background-color: #FFC9B4;
+}
+
+nav {
+    margin-top: 20px;
+    text-align: center;
+}
+
+nav a {
+    width: 97.5%; /* 使按钮宽度和父元素一样宽 */
+    text-decoration: none;
+    color: white; /* 设置文字颜色 */
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #FFB6C1; /* 设置背景色 */
+    padding: 10px 20px; /* 增加内边距让按钮更大 */
+    border-radius: 5px; /* 圆角效果 */
+    display: inline-block; /* 让它成为块级元素以适应宽度 */
+    text-align: center; /* 确保文本居中 */
+}
+
+nav a:hover {
+    background-color: #FFC9B4; /* 鼠标悬停时的背景色 */
+}
+
+footer {
+    background-color: #f1f1f1;
+    color: #666;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #fafafa;
+}
+
+input[type="date"]:focus {
+    border-color: #FFD1DC;
+    background-color: #fff;
+    outline: none;
+}
