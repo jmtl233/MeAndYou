@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-xclilv#fk_&fg(i)d6-nk$vxx36mg#p&3_s%ikimejr&2nb0b-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.jmlt.fun', 'jmlt.fun', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -125,3 +125,7 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://www.jmlt.fun',  # 添加你的域名
+]
