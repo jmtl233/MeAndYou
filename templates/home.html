@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>{{ title }}</h1>
+{#        <p>{{ subtitle }}</p>#}
+    </header>
+
+    <main>
+        <h2>选择你的操作</h2>
+        <nav>
+            <a href="{% url 'add_diary' %}">新增日记</a>
+        </nav>
+
+        <h3>所有日记：</h3>
+        <ul>
+            {% for diary in diaries %}
+                <li>
+                    <!-- 将整个<li>标签包裹在<a>标签中 -->
+                    <a href="{% url 'diary_detail' diary.id %}" class="diary-link">
+                        <div class="diary-content">
+                            <h4>{{ diary.title }}</h4>
+                            <p class="diary-date">{{ diary.created_at|date:"Y.m.d H:i:s" }}</p>
+                            <p>{{ diary.content|truncatewords:30 }}</p>
+                        </div>
+                    </a>
+                    <!-- 删除按钮 -->
+                    <form method="POST" action="{% url 'delete_diary' diary.id %}" class="delete-form">
+                        {% csrf_token %}
+                        <button type="submit" class="delete-btn">删除</button>
+                    </form>
+                </li>
+            {% empty %}
+                <li>没有任何日记。</li>
+            {% endfor %}
+        </ul>
+    </main>
+
+    <footer>
+        &copy; {{ year }} 我和你 | 记录生活，点滴回忆
+    </footer>
+</body>
+</html>
