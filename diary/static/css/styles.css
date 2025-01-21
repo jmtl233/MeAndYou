@@ -141,3 +141,43 @@ footer {
     max-height: 200px;   /* 最大高度 200px，不超过该值 */
     object-fit: contain; /* 保持图片比例，填充容器时不会裁剪 */
 }
+
+.pagination {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.pagination .step-links {
+    display: inline-block;
+    padding: 10px;
+    background-color: #FFD1DC; /* 浅粉色背景，与标题呼应 */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pagination .step-links a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff; /* 深灰色字体 */
+    margin: 0 10px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination .step-links a:hover {
+    background-color: #8cc5ff; /* 深粉色背景 */
+    color: white; /* 白色字体 */
+}
+
+.pagination .step-links .current {
+    font-size: 16px;
+    color: white;
+    background-color: #8cc5ff; /* 深粉色背景 */
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 0 10px;
+}
