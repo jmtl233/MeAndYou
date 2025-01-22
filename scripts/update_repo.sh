@@ -1,21 +1,25 @@
 #!/bin/bash
 
+# 切换到项目目录
 cd /www/wwwroot/www.jmlt.fun || { echo "无法进入目录！"; exit 1; }
 
 # 清理未跟踪的文件
 git clean -fd || { echo "清理未跟踪的文件失败！"; exit 1; }
 
-# 查找并移除所有 .pyc 文件
-find . -name "*.pyc" -exec git rm --cached {} \; || { echo "移除 .pyc 文件失败！"; exit 1; }
-
-# 确保移除的文件被添加到暂存区
-git add -A || { echo "添加 .pyc 文件移除更改失败！"; exit 1; }
-
-# 提交移除 .pyc 文件的变更
-git commit -m "移除 .pyc 文件，避免冲突" || { echo "提交 .pyc 文件移除失败！"; exit 1; }
+# 保存当前修改
+git stash || { echo "保存当前修改失败！"; exit 1; }
 
 # 切换到指定分支
 git checkout 服务器端 || { echo "切换到服务器端分支失败！"; exit 1; }
+
+# 恢复保存的修改
+git stash pop || { echo "恢复保存的修改失败！"; exit 1; }
+
+# 检查是否有冲突
+if ! git diff --quiet; then
+    echo "检测到合并冲突，请手动解决冲突。"
+    exit 1
+fi
 
 # 添加所有更改
 git add -A || { echo "添加更改失败！"; exit 1; }
