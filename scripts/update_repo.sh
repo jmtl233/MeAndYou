@@ -1,31 +1,30 @@
 #!/bin/bash
+cd /www/wwwroot/www.jmlt.fun || exit
 
-# 定义目标分支
-TARGET_BRANCH="服务器端"
+# 清理未跟踪的文件（可以定制清理规则）
+git clean -fd
 
-# 切换到项目目录
-cd /www/wwwroot/www.jmlt.fun || { echo "无法进入目录！"; exit 1; }
+# 保存当前修改
+git stash
 
-# 强制清理工作区，丢弃未提交的更改
-echo "强制清理工作区..."
-git reset --hard || { echo "重置工作区失败！"; exit 1; }
+# 切换到服务器端分支
+git checkout 服务器端 || exit
 
-# 清理未跟踪的文件
-git clean -fd || { echo "清理未跟踪的文件失败！"; exit 1; }
+# 获取当前时间，格式为 "自动同步-YYYY年MM月DD日-HH时MM分SS秒"
+branch_name="自动同步-$(date '+%Y年%m月%d日-%H时%M分%S秒')"
 
-# 强制切换到目标分支
-echo "强制切换到分支 $TARGET_BRANCH..."
-git checkout -f "$TARGET_BRANCH" || { echo "切换到分支 $TARGET_BRANCH 失败！"; exit 1; }
+# 创建但不切换到新分支
+git branch "$branch_name" || exit
+
+# 恢复保存的修改
+git stash pop
 
 # 添加所有更改
-git add -A || { echo "添加更改失败！"; exit 1; }
+git add -A
 
 # 提交并动态生成提交信息
-commit_msg="更新于 $(date '+%Y-%m-%d %H:%M:%S')"
-git commit -m "$commit_msg" || { echo "提交失败！"; exit 1; }
+git commit -m "更新于 $(date '+%Y年%m月%d日 %H时%M分%S秒')"
 
 # 强制推送到远程分支
 echo "警告：此操作将强制推送到远程分支，请谨慎操作！"
-git push origin 同步 --force || { echo "推送失败！"; exit 1; }
-
-echo "推送操作完成！"
+git push origin "$branch_name" --force
