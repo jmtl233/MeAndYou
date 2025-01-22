@@ -116,7 +116,7 @@ footer {
 }
 
 .delete-btn:hover {
-    background-color: #FF69B4; /* 深粉色背景 */
+    background-color: #FF69B4;
 }
 
 .diary-date {
@@ -142,7 +142,28 @@ footer {
     object-fit: contain;
 }
 
+/* 使内容区域的左右两侧有固定的图片 */
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+}
 
+/* 左右图片 */
+.left-image, .right-image {
+    width: 25%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.left-image img, .right-image img {
+    width: 100%;  /* 图片宽度充满容器 */
+    height: 100%; /* 图片高度充满容器 */
+    object-fit: cover; /* 保持图片的比例且覆盖容器 */
+}
+
+/* 调整分页控件的样式 */
 .pagination {
     text-align: center;
     margin: 20px 0;
@@ -168,14 +189,14 @@ footer {
 }
 
 .pagination .step-links a:hover {
-    background-color: #8cc5ff; /* 浅粉色背景 */
+    background-color: #8cc5ff;
     color: white;
 }
 
 .pagination .step-links .current {
     font-size: 16px;
     color: white;
-    background-color: #8cc5ff; /* 深蓝色背景 */
+    background-color: #8cc5ff;
     padding: 5px 10px;
     border-radius: 4px;
     font-weight: bold;

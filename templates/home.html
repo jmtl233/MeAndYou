@@ -12,39 +12,14 @@
         <h1>{{ title }}</h1>
     </header>
 
-    <div class="content-wrapper" style="display: flex; justify-content: center; position: relative;">
-
+    <div class="content-wrapper">
         <!-- 左侧图片 -->
-        <div class="left-image"
-             style="position: absolute;
-                     top: 0;
-                     bottom: 0;
-                     left: 0;
-                     width: 25%;
-                     height: 100%;
-                     background-image: url('{% static 'images/1.jpg' %}');
-                     background-size: cover;
-                     background-position: center;
-                     background-repeat: no-repeat;">
-
+        <div class="left-image">
+            <img src="{% static 'images/1.jpg' %}" alt="左侧图片">
         </div>
 
-        <!-- 右侧图片 -->
-        <div class="right-image"
-             style="position: absolute;
-                     top: 0;
-                     bottom: 0;
-                     right: 0;
-                     width: 25%;
-                     height: 100%;
-                     background-image: url('{% static 'images/2.jpg' %}');
-                     background-size: cover;
-                     background-position: center;
-                     background-repeat: no-repeat;"
-        ></div>
-
         <!-- main 内容框 -->
-        <main style="max-width: 900px; margin: 40px auto; padding: 20px; background-color: white; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); z-index: 1;">
+        <main>
             <h2>选择你的操作</h2>
             <nav>
                 <a href="{% url 'add_diary' %}">新增日记</a>
@@ -60,7 +35,7 @@
                                 <p class="diary-date">{{ diary.created_at|date:"Y.m.d H:i:s" }}</p>
                                 <p>{{ diary.content|truncatewords:30 }}</p>
                                 {% if diary.image %}
-                                    <img src="{{ diary.image.url }}" alt="Diary Image" class="diary-image" style="width: 100%; height: auto;">
+                                    <img src="{{ diary.image.url }}" alt="Diary Image" class="diary-image">
                                 {% endif %}
                             </div>
                         </a>
@@ -93,6 +68,10 @@
             </div>
         </main>
 
+        <!-- 右侧图片 -->
+        <div class="right-image">
+            <img src="{% static 'images/2.jpg' %}" alt="右侧图片">
+        </div>
     </div>
 
     <footer>
