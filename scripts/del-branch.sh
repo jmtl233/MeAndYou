@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # 切换到目标仓库目录
 cd /www/wwwroot/www.jmlt.fun || exit
 
