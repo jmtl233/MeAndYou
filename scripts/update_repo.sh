@@ -1,25 +1,21 @@
 #!/bin/bash
 
+# 定义目标分支
+TARGET_BRANCH="服务器端"
+
 # 切换到项目目录
 cd /www/wwwroot/www.jmlt.fun || { echo "无法进入目录！"; exit 1; }
+
+# 强制清理工作区，丢弃未提交的更改
+echo "强制清理工作区..."
+git reset --hard || { echo "重置工作区失败！"; exit 1; }
 
 # 清理未跟踪的文件
 git clean -fd || { echo "清理未跟踪的文件失败！"; exit 1; }
 
-# 保存当前修改
-git stash || { echo "保存当前修改失败！"; exit 1; }
-
-# 切换到指定分支
-git checkout 服务器端 || { echo "切换到服务器端分支失败！"; exit 1; }
-
-# 恢复保存的修改
-git stash pop || { echo "恢复保存的修改失败！"; exit 1; }
-
-# 检查是否有冲突
-if ! git diff --quiet; then
-    echo "检测到合并冲突，请手动解决冲突。"
-    exit 1
-fi
+# 强制切换到目标分支
+echo "强制切换到分支 $TARGET_BRANCH..."
+git checkout -f "$TARGET_BRANCH" || { echo "切换到分支 $TARGET_BRANCH 失败！"; exit 1; }
 
 # 添加所有更改
 git add -A || { echo "添加更改失败！"; exit 1; }
