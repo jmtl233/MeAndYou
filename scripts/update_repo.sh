@@ -1,6 +1,9 @@
 #!/bin/bash
 cd /www/wwwroot/www.jmlt.fun || exit
 
+# 清理未跟踪的文件
+git clean -fd
+
 # 保存当前修改
 git stash
 
