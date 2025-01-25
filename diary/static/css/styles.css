@@ -1,205 +1,213 @@
+/* 页面基本样式 */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif; /* 设置页面字体 */
+    background-color: #f4f4f9; /* 设置页面背景色 */
+    margin: 0; /* 移除页面的默认外边距 */
+    padding: 0; /* 移除页面的默认内边距 */
 }
 
+/* 头部样式 */
 header {
-    background-color: #FFD1DC;
-    color: white;
-    padding: 20px;
-    text-align: center;
+    background-color: #FFD1DC; /* 设置头部背景色 */
+    color: white; /* 设置文字颜色为白色 */
+    padding: 20px; /* 设置头部的内边距 */
+    text-align: center; /* 使头部文字居中 */
 }
 
 header h1 {
-    margin: 0;
-    font-size: 36px;
+    margin: 0; /* 移除标题的外边距 */
+    font-size: 36px; /* 设置标题的字体大小 */
 }
 
 header p {
-    margin-top: 10px;
-    font-size: 18px;
+    margin-top: 10px; /* 设置段落上方的外边距 */
+    font-size: 18px; /* 设置段落的字体大小 */
 }
 
+/* 主内容区域样式 */
 main {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 900px; /* 设置主内容区域的最大宽度 */
+    margin: 40px auto; /* 设置主内容区域的上下外边距为40px，左右自动居中 */
+    padding: 20px; /* 设置内边距 */
+    background-color: white; /* 设置背景色为白色 */
+    border-radius: 8px; /* 设置圆角 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
 }
 
 main h2 {
-    text-align: center;
-    font-size: 24px;
-    color: #333;
+    text-align: center; /* 使副标题居中 */
+    font-size: 24px; /* 设置副标题的字体大小 */
+    color: #333; /* 设置副标题的颜色 */
 }
 
+/* 导航栏 */
 nav {
-    margin: 20px 0;
-    text-align: center;
+    text-align: center; /* 导航栏文字居中 */
+    margin-top: 20px; /* 设置导航栏的上外边距 */
 }
 
 nav a {
-    text-decoration: none;
-    color: #8cc5ff;
-    font-weight: bold;
-    margin: 0 20px;
-    font-size: 18px;
+    text-decoration: none; /* 移除链接下划线 */
+    color: #8cc5ff; /* 设置链接文字颜色 */
+    font-weight: bold; /* 设置链接文字为粗体 */
+    margin: 0 20px; /* 设置链接的左右外边距 */
+    font-size: 18px; /* 设置链接的字体大小 */
 }
 
 nav a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* 鼠标悬停时添加下划线 */
 }
 
-h3 {
-    color: #333;
-    font-size: 22px;
-    margin-bottom: 15px;
+/* 导航按钮 */
+.nav-button {
+    display: inline-block; /* 使按钮与其他元素在同一行显示 */
+    padding: 10px 20px; /* 设置按钮的内边距 */
+    background-color: #FFB6C1; /* 设置按钮背景颜色 */
+    color: white; /* 设置按钮文字颜色 */
+    font-size: 18px; /* 设置按钮文字大小 */
+    border-radius: 5px; /* 设置按钮的圆角 */
+    text-align: center; /* 设置文字居中 */
+    text-decoration: none; /* 去掉按钮的下划线 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+    margin: 0 auto; /* 使按钮水平居中 */
 }
 
+.nav-button:hover {
+    background-color: #FFC9B4; /* 鼠标悬停时按钮背景颜色变化 */
+}
+
+/* 日记列表样式 */
 ul {
-    list-style: none;
-    padding: 0;
+    list-style: none; /* 移除列表的默认项目符号 */
+    padding: 0; /* 移除列表的内边距 */
 }
 
 ul li {
-    background-color: #fafafa;
-    margin-bottom: 10px;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-}
-
-ul li .diary-content {
-    margin-bottom: 10px;
+    background-color: #fafafa; /* 设置列表项背景色 */
+    margin-bottom: 10px; /* 设置列表项之间的间距 */
+    padding: 15px; /* 设置列表项的内边距 */
+    border-radius: 5px; /* 设置列表项的圆角 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+    display: flex; /* 使用flex布局 */
+    flex-direction: column; /* 垂直排列子元素 */
 }
 
 ul li h4 {
-    margin: 0;
-    font-size: 20px;
-    color: #333;
+    margin: 0; /* 移除标题的外边距 */
+    font-size: 20px; /* 设置标题的字体大小 */
+    color: #333; /* 设置标题颜色 */
 }
 
 ul li p {
-    color: #666;
-    font-size: 16px;
-    margin-top: 5px;
+    color: #666; /* 设置段落文字颜色 */
+    font-size: 16px; /* 设置段落字体大小 */
+    margin-top: 5px; /* 设置段落上方的外边距 */
 }
 
-footer {
-    background-color: #f1f1f1;
-    color: #666;
-    text-align: center;
-    padding: 10px;
-    font-size: 14px;
-    margin-top: 40px;
+ul li .diary-content {
+    margin-bottom: 10px; /* 设置内容区下方的外边距 */
 }
 
+ul li a {
+    text-decoration: none; /* 移除日记链接下划线 */
+}
+
+/* 删除按钮样式 */
 .delete-form {
-    margin-top: 10px;
-    text-align: right;
+    margin-top: 10px; /* 设置删除按钮上方的外边距 */
+    text-align: right; /* 设置删除按钮的文字居右 */
 }
 
 .delete-btn {
-    background-color: #FFB6C1;
-    color: white;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
+    background-color: #FFB6C1; /* 设置删除按钮的背景色 */
+    color: white; /* 设置按钮文字颜色 */
+    padding: 8px 16px; /* 设置按钮的内边距 */
+    border: none; /* 移除按钮的边框 */
+    border-radius: 5px; /* 设置按钮圆角 */
+    cursor: pointer; /* 设置鼠标悬停时显示为指针 */
+    font-size: 14px; /* 设置按钮字体大小 */
 }
 
 .delete-btn:hover {
-    background-color: #FF69B4;
+    background-color: #FF69B4; /* 鼠标悬停时按钮背景颜色变化 */
 }
 
+/* 日记日期样式 */
 .diary-date {
-    font-size: 14px;
-    color: #888;
-    margin: 5px 0;
+    font-size: 14px; /* 设置日期字体大小 */
+    color: #888; /* 设置日期文字颜色 */
+    margin: 5px 0; /* 设置日期的上下外边距 */
 }
 
-.diary-link {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-}
-
+/* 日记图片样式 */
 .diary-image {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    height: auto;
-    max-width: 300px;
-    max-height: 200px;
-    object-fit: contain;
+    display: block; /* 使图片为块级元素 */
+    margin-left: auto; /* 设置图片左外边距为自动 */
+    margin-right: auto; /* 设置图片右外边距为自动 */
+    width: 100%; /* 使图片宽度充满容器 */
+    height: auto; /* 高度自适应 */
+    max-width: 300px; /* 设置图片最大宽度 */
+    max-height: 200px; /* 设置图片最大高度 */
+    object-fit: contain; /* 保持图片比例同时填充容器 */
 }
 
-/* 使内容区域的左右两侧有固定的图片 */
+/* 内容区域布局 */
 .content-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    position: relative;
+    display: flex; /* 使用flex布局 */
+    justify-content: space-between; /* 设置子元素之间的间距 */
+    position: relative; /* 使父元素可以包含绝对定位的子元素 */
 }
 
-/* 左右图片 */
+/* 左右图片样式 */
 .left-image, .right-image {
-    width: 25%;
-    height: 100vh;
-    overflow: hidden;
+    width: 25%; /* 设置图片区域的宽度 */
+    height: 100vh; /* 设置图片区域的高度为视口高度 */
+    overflow: hidden; /* 隐藏超出区域的部分 */
 }
 
 .left-image img, .right-image img {
-    width: 100%;  /* 图片宽度充满容器 */
-    height: 100%; /* 图片高度充满容器 */
-    object-fit: cover; /* 保持图片的比例且覆盖容器 */
+    width: 100%; /* 使图片充满容器宽度 */
+    height: 100%; /* 使图片充满容器高度 */
+    object-fit: cover; /* 保持图片的比例且填充整个容器 */
 }
 
-/* 调整分页控件的样式 */
+/* 分页控件样式 */
 .pagination {
-    text-align: center;
-    margin: 20px 0;
+    text-align: center; /* 分页控件居中 */
+    margin: 20px 0; /* 设置分页控件的上下外边距 */
 }
 
 .pagination .step-links {
-    display: inline-block;
-    padding: 10px;
-    background-color: #FFD1DC;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: inline-block; /* 设置步骤链接为行内块元素 */
+    padding: 10px; /* 设置内边距 */
+    background-color: #FFD1DC; /* 设置背景色 */
+    border-radius: 8px; /* 设置圆角 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
 }
 
 .pagination .step-links a {
-    text-decoration: none;
-    font-size: 16px;
-    color: #fff;
-    margin: 0 10px;
-    font-weight: bold;
-    padding: 5px 10px;
-    border-radius: 4px;
-    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none; /* 移除链接下划线 */
+    font-size: 16px; /* 设置字体大小 */
+    color: #fff; /* 设置文字颜色为白色 */
+    margin: 0 10px; /* 设置链接左右外边距 */
+    font-weight: bold; /* 设置链接文字为粗体 */
+    padding: 5px 10px; /* 设置内边距 */
+    border-radius: 4px; /* 设置圆角 */
+    transition: background-color 0.3s, color 0.3s; /* 添加平滑过渡效果 */
 }
 
 .pagination .step-links a:hover {
-    background-color: #8cc5ff;
-    color: white;
+    background-color: #8cc5ff; /* 鼠标悬停时背景颜色变化 */
+    color: white; /* 鼠标悬停时文字颜色变化 */
 }
 
 .pagination .step-links .current {
-    font-size: 16px;
-    color: white;
-    background-color: #8cc5ff;
-    padding: 5px 10px;
-    border-radius: 4px;
-    font-weight: bold;
-    display: inline-block;
-    margin: 0 10px;
+    font-size: 16px; /* 设置当前页字体大小 */
+    color: white; /* 设置当前页文字颜色为白色 */
+    background-color: #8cc5ff; /* 设置当前页背景颜色 */
+    padding: 5px 10px; /* 设置内边距 */
+    border-radius: 4px; /* 设置圆角 */
+    font-weight: bold; /* 设置文字为粗体 */
+    display: inline-block; /* 使当前页为块级元素 */
+    margin: 0 10px; /* 设置当前页的左右外边距 */
 }
