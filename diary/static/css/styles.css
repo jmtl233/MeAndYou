@@ -8,7 +8,7 @@ body {
 
 /* 头部样式 */
 header {
-    background-color: #FFD1DC; /* 设置头部背景色 */
+    background-color: #8cc5ff; /* 设置头部背景色 */
     color: white; /* 设置文字颜色为白色 */
     padding: 20px; /* 设置头部的内边距 */
     text-align: center; /* 使头部文字居中 */
@@ -62,7 +62,7 @@ nav a:hover {
 .nav-button {
     display: inline-block; /* 使按钮与其他元素在同一行显示 */
     padding: 10px 20px; /* 设置按钮的内边距 */
-    background-color: #FFB6C1; /* 设置按钮背景颜色 */
+    background-color: #8cc5ff; /* 设置按钮背景颜色 */
     color: white; /* 设置按钮文字颜色 */
     font-size: 18px; /* 设置按钮文字大小 */
     border-radius: 5px; /* 设置按钮的圆角 */
@@ -119,7 +119,8 @@ ul li a {
 }
 
 .delete-btn {
-    background-color: #FFB6C1; /* 设置删除按钮的背景色 */
+    background-color: #8cc5ff; /* 设置删除按钮的背景色 */
+    background-color: #8cc5ff; /* 设置删除按钮的背景色 */
     color: white; /* 设置按钮文字颜色 */
     padding: 8px 16px; /* 设置按钮的内边距 */
     border: none; /* 移除按钮的边框 */
@@ -180,7 +181,7 @@ ul li a {
 .pagination .step-links {
     display: inline-block; /* 设置步骤链接为行内块元素 */
     padding: 10px; /* 设置内边距 */
-    background-color: #FFD1DC; /* 设置背景色 */
+    background-color: #8cc5ff; /* 设置背景色 */
     border-radius: 8px; /* 设置圆角 */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
 }

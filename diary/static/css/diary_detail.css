@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background-color: #FFD1DC; /* 淡粉色 */
+    background-color: #8cc5ff; /* 淡粉色 */
     color: white;
     padding: 20px;
     text-align: center;
@@ -46,7 +46,7 @@ nav {
 
 button {
     width: 100%;
-    background-color: #FFB6C1; /* 淡粉色背景 */
+    background-color: #8cc5ff; /* 淡粉色背景 */
     color: white;
     padding: 10px 20px;
     border: none;
@@ -142,7 +142,7 @@ footer {
     width: auto; /* 按钮宽度自动 */
     padding: 5px 10px; /* 小的内边距 */
     font-size: 14px; /* 较小的字体 */
-    background-color: #FFB6C1; /* 番茄红背景 */
+    background-color: #8cc5ff; /* 番茄红背景 */
     color: white;
     border: none;
     border-radius: 5px;
@@ -192,14 +192,14 @@ input[type="text"], textarea {
 }
 
 input[type="text"]:focus, textarea:focus {
-    border-color: #FFD1DC;
+    border-color: #8cc5ff;
     background-color: #fff;
     outline: none;
 }
 
 button, .nav-button {
     width: 100%; /* 让按钮与文本框一样宽 */
-    background-color: #FFB6C1;
+    background-color: #8cc5ff;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -212,7 +212,7 @@ button, .nav-button {
 }
 
 button:hover, .nav-button:hover {
-    background-color: #FFC9B4;
+    background-color: #8cc5ff;
 }
 
 nav {
@@ -226,7 +226,7 @@ nav a {
     color: white; /* 设置文字颜色 */
     font-weight: bold;
     font-size: 18px;
-    background-color: #FFB6C1; /* 设置背景色 */
+    background-color: #8cc5ff; /* 设置背景色 */
     padding: 10px 20px; /* 增加内边距让按钮更大 */
     border-radius: 5px; /* 圆角效果 */
     display: inline-block; /* 让它成为块级元素以适应宽度 */
