@@ -44,7 +44,7 @@
                         <!-- 删除按钮 -->
                         <form method="POST" action="{% url 'delete_comment' comment.id %}" class="delete-form">
                             {% csrf_token %}
-{#                            <button type="submit" class="delete-comment-btn">删除</button>#}
+                            {#<button type="submit" class="delete-comment-btn">删除</button>#}
                         </form>
                     </li>
                 {% empty %}
